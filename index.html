@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SGPA & CGPA Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-black min-h-screen flex flex-col items-center justify-center p-6">
+  <div class="w-full max-w-3xl border border-black rounded-2xl p-6">
+    <h1 class="text-2xl font-bold text-center mb-6">Semester 3 SGPA & Overall CGPA Calculator</h1>
+
+    <table class="w-full border border-black mb-6 text-sm">
+      <thead>
+        <tr class="bg-black text-white">
+          <th class="border border-black p-2 text-left">Course Title</th>
+          <th class="border border-black p-2 text-center">Credits</th>
+          <th class="border border-black p-2 text-center">Grade Points (0–10)</th>
+        </tr>
+      </thead>
+      <tbody id="courses">
+        <tr><td class="border border-black p-2">Mathematics – III</td><td class="border border-black p-2 text-center">3</td><td class="border border-black p-2 text-center"><select class="border border-black w-16 text-center grade" data-credits="3"><option value="">--</option><option value="10">10</option><option value="9">9</option><option value="8">8</option><option value="7">7</option><option value="6">6</option><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0">0</option></select></td></tr>
+        <tr><td class="border border-black p-2">Logic and Switching Theory</td><td class="border border-black p-2 text-center">3</td><td class="border border-black p-2 text-center"><select class="border border-black w-16 text-center grade" data-credits="3"><option value="">--</option><option value="10">10</option><option value="9">9</option><option value="8">8</option><option value="7">7</option><option value="6">6</option><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0">0</option></select></td></tr>
+        <tr><td class="border border-black p-2">Data Structures</td><td class="border border-black p-2 text-center">3</td><td class="border border-black p-2 text-center"><select class="border border-black w-16 text-center grade" data-credits="3"><option value="">--</option><option value="10">10</option><option value="9">9</option><option value="8">8</option><option value="7">7</option><option value="6">6</option><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0">0</option></select></td></tr>
+        <tr><td class="border border-black p-2">Discrete Mathematics</td><td class="border border-black p-2 text-center">3</td><td class="border border-black p-2 text-center"><select class="border border-black w-16 text-center grade" data-credits="3"><option value="">--</option><option value="10">10</option><option value="9">9</option><option value="8">8</option><option value="7">7</option><option value="6">6</option><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0">0</option></select></td></tr>
+        <tr><td class="border border-black p-2">OOP using JAVA</td><td class="border border-black p-2 text-center">3</td><td class="border border-black p-2 text-center"><select class="border border-black w-16 text-center grade" data-credits="3"><option value="">--</option><option value="10">10</option><option value="9">9</option><option value="8">8</option><option value="7">7</option><option value="6">6</option><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0">0</option></select></td></tr>
+        <tr><td class="border border-black p-2">Introduction to Data Science</td><td class="border border-black p-2 text-center">3</td><td class="border border-black p-2 text-center"><select class="border border-black w-16 text-center grade" data-credits="3"><option value="">--</option><option value="10">10</option><option value="9">9</option><option value="8">8</option><option value="7">7</option><option value="6">6</option><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0">0</option></select></td></tr>
+        <tr><td class="border border-black p-2">Effective Technical Communication</td><td class="border border-black p-2 text-center">3</td><td class="border border-black p-2 text-center"><select class="border border-black w-16 text-center grade" data-credits="3"><option value="">--</option><option value="10">10</option><option value="9">9</option><option value="8">8</option><option value="7">7</option><option value="6">6</option><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0">0</option></select></td></tr>
+        <tr><td class="border border-black p-2">Data Structures Lab</td><td class="border border-black p-2 text-center">1</td><td class="border border-black p-2 text-center"><select class="border border-black w-16 text-center grade" data-credits="1"><option value="">--</option><option value="10">10</option><option value="9">9</option><option value="8">8</option><option value="7">7</option><option value="6">6</option><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0">0</option></select></td></tr>
+        <tr><td class="border border-black p-2">Data Science Lab</td><td class="border border-black p-2 text-center">1</td><td class="border border-black p-2 text-center"><select class="border border-black w-16 text-center grade" data-credits="1"><option value="">--</option><option value="10">10</option><option value="9">9</option><option value="8">8</option><option value="7">7</option><option value="6">6</option><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0">0</option></select></td></tr>
+        <tr><td class="border border-black p-2">OOP using JAVA Lab</td><td class="border border-black p-2 text-center">1</td><td class="border border-black p-2 text-center"><select class="border border-black w-16 text-center grade" data-credits="1"><option value="">--</option><option value="10">10</option><option value="9">9</option><option value="8">8</option><option value="7">7</option><option value="6">6</option><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option><option value="1">1</option><option value="0">0</option></select></td></tr>
+      </tbody>
+    </table>
+
+    <div class="flex justify-center">
+      <button id="calculate" class="border border-black px-4 py-2 hover:bg-black hover:text-white transition">Calculate SGPA & CGPA</button>
+    </div>
+
+    <div id="results" class="mt-6 text-center hidden">
+      <p class="text-lg font-semibold">Semester 3 SGPA: <span id="sgpa" class="font-bold"></span></p>
+      <p class="text-lg font-semibold">Overall CGPA (after Sem 3): <span id="cgpa" class="font-bold"></span></p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('calculate').addEventListener('click', function() {
+      const grades = document.querySelectorAll('.grade');
+      let totalCredits = 0;
+      let totalPoints = 0;
+
+      grades.forEach(input => {
+        const grade = parseFloat(input.value);
+        const credits = parseFloat(input.dataset.credits);
+        if (!isNaN(grade)) {
+          totalCredits += credits;
+          totalPoints += grade * credits;
+        }
+      });
+
+      const sgpa3 = totalPoints / totalCredits;
+      //here you should change 7.64 and 7.69 with your sem 1 & 2 SGPA
+      const cgpa = ((21 * 7.64) + (22.5 * 7.69) + (24 * sgpa3)) / (21 + 22.5 + 24);
+
+      document.getElementById('sgpa').textContent = sgpa3.toFixed(2);
+      document.getElementById('cgpa').textContent = cgpa.toFixed(2);
+      document.getElementById('results').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
